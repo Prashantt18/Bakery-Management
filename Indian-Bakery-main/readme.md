@@ -1,4 +1,4 @@
-# 🎂 Sweet Dreams – Bakery Inventory Manager
+# 🎂 Prashant Bakery – Bakery Inventory Manager
 
 A sleek and powerful inventory system tailored for bakeries, powered by a microservices architecture. Effortlessly manage stock, monitor products, and grow your business.
 
@@ -10,7 +10,6 @@ A sleek and powerful inventory system tailored for bakeries, powered by a micros
 |-----------------------|-------------------------------------------------------|
 | 📦 Live Inventory     | Real-time updates and stock tracking                  |
 | 🧱 Microservice Design| Each module runs independently for easy scaling       |
-| 📈 Visual Analytics   | Track trends with elegant charts *(coming soon!)*     |
 | 📱 Fully Responsive   | Optimized for mobile, tablet, and desktop             |
 
 ---
