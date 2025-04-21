@@ -1,43 +1,51 @@
-# 🧁🍰 Bakery Management System 
+# 🎂 Sweet Dreams – Bakery Inventory Manager
 
-A modern solution for bakery inventory management with a microservices architecture. Manage your sweet business with style! 🎂📈
+A sleek and powerful inventory system tailored for bakeries, powered by a microservices architecture. Effortlessly manage stock, monitor products, and grow your business.
 
-## 🌟 System Highlights
+---
 
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| 📦 Real-time Inventory | Instant stock updates across all services                                   |
-| 🧩 Microservices       | Independent scalable containers                                             |
-| 📊 Dashboard Analytics | Beautiful charts showing sales trends (Coming Soon!)                        |
-| 📱 Mobile Ready        | Responsive design works on all devices                                      |
+## 🚀 Features at a Glance
 
-## 🏗️ System Architecture
-![Project Screenshot](https://github.com/user-attachments/assets/710c1fa9-a972-45ed-ba10-6bcadf10a158)
+| Feature               | Description                                           |
+|-----------------------|-------------------------------------------------------|
+| 📦 Live Inventory     | Real-time updates and stock tracking                  |
+| 🧱 Microservice Design| Each module runs independently for easy scaling       |
+| 📈 Visual Analytics   | Track trends with elegant charts *(coming soon!)*     |
+| 📱 Fully Responsive   | Optimized for mobile, tablet, and desktop             |
 
-## 📦 Core Components
+---
 
-| Component               | Technology Stack                            | Purpose                                 |
-|-------------------------|---------------------------------------------|-----------------------------------------|
-| 🖥️ Frontend            | React + Vite + Tailwind CSS                 | Interactive UI/UX                      |
-| ⚙️ API Layer           | Node.js + Express                           | Business logic & endpoints             |
-| 🗃️ Database            | PostgreSQL                                  | Reliable data storage                  |
-| 📡 Messaging           | RabbitMQ + AMQP                             | Async communication                    |
-| 📦 Containerization    | Docker + Docker Compose                     | Service isolation & scaling            |
+## 🛠️ Tech Stack Overview
 
-## 🚀 Getting Started in 4 Steps!
+| Layer               | Stack                                |
+|---------------------|--------------------------------------|
+| 🖥 Frontend         | React + Vite + Tailwind CSS          |
+| ⚙ Backend API      | Node.js + Express                    |
+| 🗃 Database         | PostgreSQL                           |
+| 🔄 Messaging Queue | RabbitMQ + AMQP                      |
+| 📦 Containerization | Docker + Docker Compose              |
 
-### 1. **Clone & Enter** 🛠️
+---
+
+
+
+---
+
+## 📥 Getting Started
+
+### 1. Clone the repo
 ```bash
-git clone https://github.com/Adityasahni04/Indian-Bakery.git
-cd Indian-Bakery
+git clone https://github.com/Prashantt18/Bakery-Management/tree/main/Indian-Bakery-main
+cd Indian-Bakery-main
 ```
+### 2. Configure Environment
 
-### 2. **Setup Environment** 🔧
-Create `.env` file in project root:
+Create a `.env` file in the project root with the following contents:
+
 ```env
 # Database configuration
-POSTGRES_USER=aditya
-POSTGRES_PASSWORD=aditya
+POSTGRES_USER=prashant
+POSTGRES_PASSWORD=pk123
 POSTGRES_DB=indianbakery
 DB_PORT=5432
 
@@ -49,82 +57,30 @@ RABBITMQ_PORT=5672
 
 # Backend environment
 DB_HOST=db
-DB_USER=aditya
-DB_PASSWORD=aditya
+DB_USER=prashant
+DB_PASSWORD=pk123
 DB_NAME=indianbakery
 
-# Frontend
+# Frontend build arg
 VITE_API_URL=http://localhost:8000
 ```
-
-### 3. **Launch Services** ✨
-```bash
+### 3. Launch the Platform 🚢
+Start all services using Docker:
+```
 docker-compose up --build -d
 ```
-
-### 4. **Access Application** 🎉
+### 4. Visit the Application 🎉
+Open in your browser:
 ```
 http://localhost:80
 ```
+### 5. Outputs
+#### 🖥️ Dashboard View  
+![Output 1](images/home.png)
 
-> 💡 Pro Tip: Run `docker ps` to verify all containers are healthy
+#### 📦 Product Inventory  
+![Output 2](images/service.png)
 
-## 📚 API Cheat Sheet
+#### 📈 Docker  
+![Output 3](images/docker.png)
 
-| Endpoint               | Method   | Description                      | Success Code |
-|------------------------|----------|----------------------------------|--------------|
-| `/listproducts`        | `GET`    | List all items                   | 200 OK       |
-| `/addproduct`          | `POST`   | Create new product               | 201 Created  |
-| `/updateproduct/{id}`  | `PUT`    | Modify existing product          | 200 OK       |
-| `/deleteproduct/{id}`  | `DELETE` | Remove product                   | 204 No Content|
-
-### 📄 Example Request Flow
-
-```javascript
-// Adding new croissants 🥐
-fetch('/addproduct', {
-  method: 'POST',
-  body: JSON.stringify({
-  "name": "Croissant",
-  "category": "Pastry",
-  "price": 2.99,
-  "stock": 50,
-  "image": "croissant.jpg"
-  })
-});
-```
-
-## 🗃️ Database Schema
-
-**Products Table**
-
-| Column       | Type        | Example Value     |
-|--------------|-----------------|-----------------------------|
-| id (PK)      | SERIAL          | 42                          |
-| name         | VARCHAR(80)     | "Chocolate Cake"            |
-| category     | VARCHAR(50)     | "Cakes"                     |
-| price        | DECIMAL(10,2)   | 24.99                       |
-| stock        | INTEGER         | 50                          |
-| image_url    | VARCHAR(255)    | "upload/cake/chocolate.jpg" |
-
-## 📊 Coming Soon Features
-
-- 🔐 Auth & Roles – User authentication & admin controls
-- 🚀 CI/CD Pipeline – Automated testing & deployment
-- 🛵 Rapido Delivery – Local bakery delivery API
-
-## 🛠️ Troubleshooting Guide
-
-| Issue                        | Solution                          |
-|------------------------------|-----------------------------------|
-| Docker build failing         | `docker system prune -a`          |
-| Port conflicts               | Check for other services on :80   |
-| Database connection issues   | Verify PG credentials in .env     |
-
-## 🤝 Contribution Welcome!
-
-Join our baking squad! 👩🍳👨🍳
-1. 🍴 Fork the repository
-2. 🛠️ Create your feature branch
-3. 📦 Add your improvements
-4. 🚀 Open a Pull Request
